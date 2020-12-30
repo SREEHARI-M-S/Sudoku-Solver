@@ -27,3 +27,9 @@ def display_board(board):
                 print(str(board[i][j]) + " ", end="")
     print("")
 
+# * Look for an empty space in the board which is yet to be filled
+def find_empty_slot(board):
+    for i in range(len(board)):
+        for j in range(len(board[i][j])):
+            if board[i][j]==0:
+                return (i, j)  #return a touple representing the row and column numbers
